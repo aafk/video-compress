@@ -5,6 +5,7 @@
   "license": "MIT",
   "author": "Talented Dev",
   "scripts": {
+    "test": "echo \"success\"",
     "start": "node index.js"
   },
   "repository": {
