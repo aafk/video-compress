@@ -1,4 +1,4 @@
-# Video Compressor
+# Video Compress
 
 This package is used to reduce the size of the videos in your project. After including this package to the project, you must provide the input and output file paths as parameter of compress method. Later, when you upload video to the path you specified as input in your project, this package compresses and reduces the size of large video files you upload. Compressed video files are added to the file path you specify as output. As a result, only compressed videos are contained in the output folder.
 
@@ -7,13 +7,13 @@ This package is used to reduce the size of the videos in your project. After inc
 Install my-project with npm
 
 ```bash
-npm install video-compressor
+npm install video-compress
 ```
 
 ## Usage/Examples
 
 ```javascript
-const videoCompressor = require("video-compressor");
+const videoCompressor = require("video-compress");
 videoCompressor(input, output);
 ```
 
@@ -24,7 +24,7 @@ videoCompressor(input, output);
 
 ## 🚀 Example
 
-[https://github.com/aafk/video-compressor-example.git](https://github.com/aafk/video-compressor-example)
+[https://github.com/aafk/video-compress-example.git](https://github.com/aafk/video-compress-example)
 
 ## Related
 

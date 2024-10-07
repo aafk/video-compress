@@ -1,37 +1,36 @@
-const watch = require('node-watch');
-const path = require('path');
-const fs = require('fs');
+const watch = require("node-watch");
+const path = require("path");
+const fs = require("fs");
 
-const {input, output} = require('./res/paths');
-
+const { input, output } = require("./res/paths");
 
 const getVideosFromFolder = (folder) => {
-    const files = fs.readdirSync(path.resolve(folder));
+  const files = fs.readdirSync(path.resolve(folder));
 
-    return files.filter(founded => founded.match(/.*\.(mp4|avi|webm)/gi));
+  return files.filter((founded) => founded.match(/.*\.(mp4|avi|webm)/gi));
 };
 
 const sync = () => {
-    const origin = getVideosFromFolder(input);
-    const dest = getVideosFromFolder(output);
+  const origin = getVideosFromFolder(input);
+  const dest = getVideosFromFolder(output);
 
-    const missingVideos = [];
-    origin.forEach((v, i) => {
-        if (!dest.includes(v)) {
-            missingVideos.push(v);
-        }
-    });
+  const missingVideos = [];
+  origin.forEach((v, i) => {
+    if (!dest.includes(v)) {
+      missingVideos.push(v);
+    }
+  });
 
-    return missingVideos;
+  return missingVideos;
 };
 
 const watchFiles = (call, notify) => {
-    watch(path.resolve(input), {recursive: false}, function (evt, name) {
-        if (evt === 'update' && name.match(/.*\.(mp4|avi)/gi)) {
-            const video = name.split('\\');
-            call(video[video.length - 1], notify);
-        }
-    });
+  watch(path.resolve(input), { recursive: false }, function (evt, name) {
+    if (evt === "update" && name.match(/.*\.(mp4|webm|avi)/gi)) {
+      const video = name.split("\\");
+      call(video[video.length - 1], notify);
+    }
+  });
 };
 
-module.exports = {watchFiles, sync};
+module.exports = { watchFiles, sync };

@@ -1,1 +1,5 @@
-{"input":"G:\\redrum\\meme-protocol\\.tmp","output":"G:\\redrum\\meme-protocol\\.dist"}
+{
+  "input": ".tmp",
+  "output": ".dist",
+  "size": "900x200"
+}

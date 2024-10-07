@@ -1,14 +1,14 @@
 {
-  "name": "video-compressor",
-  "version": "1.0.4",
+  "name": "video-compress",
+  "version": "0.0.3",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "start": "node index.js"
-  },  
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iremaslandogan/video-compressor.git"
+    "url": "git+https://github.com/aafk/video-compress.git"
   },
   "dependencies": {
     "@ffmpeg-installer/ffmpeg": "^1.0.17",
@@ -23,6 +23,7 @@
     "node-watch": "^0.6.2"
   },
   "keywords": [
+    "aafk",
     "video",
     "compress",
     "ffmpeg",
